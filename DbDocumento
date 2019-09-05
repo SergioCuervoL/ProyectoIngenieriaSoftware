@@ -168,16 +168,6 @@ ALTER TABLE `presupuesto`
   ADD PRIMARY KEY (`DOCUMENTO_idDocumento`,`DOCUMENTO_USUARIO_idUsuarioOfertante`,`DOCUMENTO_USUARIO_idUsuarioGerente`);
 
 --
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idUSUARIO`);
-
---
--- Restricciones para tablas volcadas
---
-
---
 -- Filtros para la tabla `documento`
 --
 ALTER TABLE `documento`
