@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bddocumentos`
+-- Base de datos: `phplogin`
 --
 
 -- --------------------------------------------------------
@@ -106,15 +106,23 @@ CREATE TABLE `presupuesto` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `usuario` (
-  `idUSUARIO` int(11) NOT NULL,
-  `nombreUsuario` varchar(45) COLLATE latin1_spanish_ci NOT NULL,
-  `correoUsuario` varchar(45) COLLATE latin1_spanish_ci NOT NULL,
-  `contraseĂ±aUsuario` varchar(45) COLLATE latin1_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+CREATE TABLE `users` (
+  `Id` mediumint(8) NOT NULL,
+  `Name` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `Email` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `Password` varchar(128) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`Id`, `Name`, `Email`, `Password`) VALUES
+(1, 'Santiaguito', 'mxsmxslx@gmail.com', '$2y$10$laYdo68EfJZ1SP7bFLbSouBYy.6KdWybqv.nxUOAtNIrUBwcsAAbu'),
+(2, 'Estefania Moreno', 'emorenocorr@alas.com', '$2y$10$QU.KEhzbX3lqk.X9sSId7eythrSwxych84a.GV4FWsiVy.rzPvV2i');
 
 --
 -- Índices para tablas volcadas
