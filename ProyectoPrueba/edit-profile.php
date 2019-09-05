@@ -38,12 +38,14 @@ session_start();
     <div class="container">
         <p>Welcome: <?php echo $_SESSION['name']; ?></p>
         <h3>Edite su documento</h3>
-        <ul>
-            <li>Nombre</li>
-            <li>Descripción</li>
-            <li>Tamaño</li>
-            
-        </ul>
+	    <div class="container">
+		<p>Welcome: <?php echo $_SESSION['name']; ?></p>
+		<form action="documentUp.php" method="post" enctype="multipart/form-data">
+		    <input type="file" name="archivo" id="archivo"></input>
+		    <input type="submit" value="subirArchivo">
+		</form>
+		<p><a href="logout.php">Logout</a></p>
+	    </div>
         <p><a href="logout.php">Cerrar sesión</a></p>
     </div>
 
